@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Política de Privacidade — Damas do Caos</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0e0c07;
+    --panel: #1a1710;
+    --border: #3a3015;
+    --gold: #c9a84c;
+    --gold2: #e8c96a;
+    --gold3: #f5e199;
+    --dim: #7a6a3a;
+    --text: #f0e8cc;
+    --text-dim: #c8b888;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Crimson Text', Georgia, serif;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    min-height: 100vh;
+    background-image:
+      radial-gradient(ellipse at 50% 0%, rgba(201,168,76,0.09) 0%, transparent 55%),
+      radial-gradient(ellipse at 20% 100%, rgba(80,60,10,0.3) 0%, transparent 60%);
+  }
+
+  /* ── HEADER ── */
+  header {
+    text-align: center;
+    padding: 60px 20px 40px;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+    overflow: hidden;
+  }
+  header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(201,168,76,0.06) 0%, transparent 100%);
+    pointer-events: none;
+  }
+  .header-icon {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 12px;
+    filter: drop-shadow(0 0 20px rgba(201,168,76,0.5));
+  }
+  h1 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(1.4rem, 5vw, 2.2rem);
+    font-weight: 900;
+    color: var(--gold2);
+    letter-spacing: 3px;
+    text-shadow: 0 0 30px rgba(201,168,76,0.4), 0 2px 4px rgba(0,0,0,0.8);
+    margin-bottom: 6px;
+  }
+  .subtitle-header {
+    font-family: 'Cinzel', serif;
+    font-size: 0.7rem;
+    color: var(--dim);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .last-update {
+    display: inline-block;
+    font-size: 0.85rem;
+    color: var(--dim);
+    background: rgba(201,168,76,0.06);
+    border: 1px solid rgba(201,168,76,0.15);
+    border-radius: 99px;
+    padding: 4px 14px;
+    font-style: italic;
+  }
+
+  /* ── CONTENT ── */
+  main {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+  }
+
+  .intro {
+    background: rgba(201,168,76,0.05);
+    border: 1px solid rgba(201,168,76,0.15);
+    border-left: 3px solid var(--gold);
+    border-radius: 8px;
+    padding: 18px 22px;
+    margin-bottom: 36px;
+    font-size: 1rem;
+    color: var(--text-dim);
+    font-style: italic;
+  }
+
+  .section {
+    margin-bottom: 32px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+  }
+  .section:last-child { border-bottom: none; }
+
+  .section-number {
+    font-family: 'Cinzel', serif;
+    font-size: 0.65rem;
+    color: var(--gold);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    display: block;
+  }
+  h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--gold2);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  h2::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, var(--border), transparent);
+  }
+
+  p { color: var(--text-dim); margin-bottom: 10px; }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 8px 0 10px;
+  }
+  ul li {
+    color: var(--text-dim);
+    padding: 5px 0 5px 20px;
+    position: relative;
+  }
+  ul li::before {
+    content: '♟';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+    font-size: 0.7rem;
+    top: 8px;
+  }
+
+  strong { color: var(--text); font-weight: 600; }
+
+  a {
+    color: var(--gold2);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(201,168,76,0.3);
+    transition: color .2s, border-color .2s;
+  }
+  a:hover { color: var(--gold3); border-color: var(--gold3); }
+
+  /* ── CONTACT CARD ── */
+  .contact-card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-top: 2px solid var(--gold);
+    border-radius: 10px;
+    padding: 20px 22px;
+    margin-top: 12px;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+  }
+  .contact-icon { font-size: 1.8rem; flex-shrink: 0; margin-top: 2px; }
+  .contact-name {
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem;
+    color: var(--gold2);
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+  }
+  .contact-email { font-size: 0.9rem; }
+
+  /* ── BADGE ── */
+  .compliance-badge {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 40px;
+    padding: 16px;
+    background: rgba(201,168,76,0.04);
+    border: 1px solid rgba(201,168,76,0.12);
+    border-radius: 10px;
+    font-family: 'Cinzel', serif;
+    font-size: 0.65rem;
+    color: var(--dim);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    text-align: center;
+    padding: 24px;
+    border-top: 1px solid var(--border);
+    font-size: 0.8rem;
+    color: var(--dim);
+    font-family: 'Cinzel', serif;
+    letter-spacing: 1px;
+  }
+  footer a { color: var(--dim); border-bottom-color: transparent; }
+  footer a:hover { color: var(--gold); }
+
+  @media (max-width: 500px) {
+    main { padding: 28px 16px 60px; }
+    h1 { font-size: 1.3rem; letter-spacing: 2px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <span class="header-icon">♟</span>
+  <h1>DAMAS DO CAOS</h1>
+  <div class="subtitle-header">Política de Privacidade</div>
+  <span class="last-update">Última atualização: abril de 2026</span>
+</header>
+
+<main>
+
+  <div class="intro">
+    Esta Política de Privacidade descreve como o jogo <strong>Damas do Caos</strong>, desenvolvido por Gabriel Mateus Nascimento de Oliveira, coleta, utiliza e protege as informações dos usuários. Ao usar o aplicativo, você concorda com as práticas descritas neste documento.
+  </div>
+
+  <div class="section">
+    <span class="section-number">Artigo I</span>
+    <h2>Dados Coletados</h2>
+    <p>O aplicativo pode coletar os seguintes dados:</p>
+    <ul>
+      <li><strong>Nome ou apelido do jogador:</strong> usado exclusivamente para exibição no ranking online global.</li>
+      <li><strong>Dados de desempenho:</strong> pontuação, vitórias, sequência de vitórias, reinos conquistados e posição no ranking.</li>
+      <li><strong>Dados de progresso local:</strong> moedas virtuais, poderes desbloqueados, progresso no Modo Mundo — armazenados no dispositivo do usuário.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <span class="section-number">Artigo II</span>
+    <h2>Como os Dados São Usados</h2>
+    <p>Os dados são utilizados exclusivamente para:</p>
+    <ul>
+      <li>Exibir o ranking global de jogadores</li>
+      <li>Registrar pontuações e progresso competitivo</li>
+      <li>Salvar o progresso do jogador entre sessões</li>
+      <li>Melhorar a experiência geral do jogo</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <span class="section-number">Artigo III</span>
+    <h2>Armazenamento e Segurança</h2>
+    <p>Os dados do ranking são armazenados em infraestrutura segura na nuvem utilizando o <strong>Firebase Firestore (Google)</strong>, com criptografia em trânsito.</p>
+    <p>Os dados de progresso local são armazenados exclusivamente no dispositivo do usuário e nunca transmitidos.</p>
+  </div>
+
+  <div class="section">
+    <span class="section-number">Artigo IV</span>
+    <h2>Publicidade (Google AdMob)</h2>
+    <p>O aplicativo pode exibir anúncios fornecidos pelo <strong>Google AdMob</strong>. O Google pode usar identificadores de dispositivo e dados de uso para exibir anúncios relevantes. Para mais informações, consulte a <a href="https://policies.google.com/privacy" target="_blank">Política de Privacidade do Google</a>.</p>
+    <p>Usuários que adquirirem o plano <strong>Premium</strong> não verão anúncios.</p>
+  </div>
+
+  <div class="section">
+    <span class="section-number">Artigo V</span>
+    <h2>Compras dentro do Aplicativo</h2>
+    <p>O Damas do Caos oferece compras opcionais por meio do <strong>Google Play Billing</strong>. As transações são processadas diretamente pelo Google. Não temos acesso a dados de pagamento.</p>
+  </div>
+
+  <div class="section">
+    <span class="section-number">Artigo VI</span>
+    <h2>Compartilhamento de Dados</h2>
+    <p>O Damas do Caos <strong>não vende nem compartilha</strong> dados pessoais com terceiros para fins publicitários ou de marketing.</p>
+  </div>
+
+  <div class="section">
+    <span class="section-number">Artigo VII</span>
+    <h2>Contas de Usuário</h2>
+    <p>O aplicativo não exige criação de conta, login ou autenticação formal. O apelido informado serve apenas para identificação no ranking global.</p>
+  </div>
+
+  <div class="section">
+    <span class="section-number">Artigo VIII</span>
+    <h2>Dados de Crianças</h2>
+    <p>O Damas do Caos não é direcionado especificamente a crianças menores de 13 anos. Não coletamos intencionalmente dados pessoais de crianças.</p>
+  </div>
+
+  <div class="section">
+    <span class="section-number">Artigo IX</span>
+    <h2>Seus Direitos (LGPD)</h2>
+    <p>De acordo com a <strong>Lei Geral de Proteção de Dados (Lei nº 13.709/2018)</strong>, você tem direito a acessar, corrigir ou solicitar a exclusão dos seus dados.</p>
+    <p>Caso deseje remover seu nome do ranking, entre em contato com o desenvolvedor para exclusão manual.</p>
+  </div>
+
+  <div class="section">
+    <span class="section-number">Artigo X</span>
+    <h2>Alterações nesta Política</h2>
+    <p>Esta política poderá ser atualizada periodicamente para refletir melhorias no jogo ou mudanças em funcionalidades. Alterações significativas serão comunicadas por atualização do aplicativo.</p>
+  </div>
+
+  <div class="section">
+    <span class="section-number">Artigo XI</span>
+    <h2>Contato</h2>
+    <p>Em caso de dúvidas sobre esta Política de Privacidade, entre em contato:</p>
+    <div class="contact-card">
+      <div class="contact-icon">⚔️</div>
+      <div>
+        <div class="contact-name">Gabriel Mateus Nascimento de Oliveira</div>
+        <div class="contact-email"><a href="mailto:gabrielmateus.mg@gmail.com">gabrielmateus.mg@gmail.com</a></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="compliance-badge">
+    <span>⚖️</span>
+    <span>Em conformidade com as diretrizes do Google Play e com a LGPD — Lei nº 13.709/2018</span>
+  </div>
+
+</main>
+
+<footer>
+  <a href="#">♟ Damas do Caos</a> &nbsp;·&nbsp; Desenvolvido por RobotGTech &nbsp;·&nbsp; © 2026
+</footer>
+
+</body>
+</html>
